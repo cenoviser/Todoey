@@ -16,6 +16,7 @@
 		EE97C88121BA8EF800DD740E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE97C87F21BA8EF800DD740E /* Main.storyboard */; };
 		EE97C88321BA8EF800DD740E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE97C88221BA8EF800DD740E /* Assets.xcassets */; };
 		EE97C88621BA8EF800DD740E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE97C88421BA8EF800DD740E /* LaunchScreen.storyboard */; };
+		EEB67AC7221A92F500E61EAC /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB67AC6221A92F500E61EAC /* SwipeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EE97C88221BA8EF800DD740E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE97C88521BA8EF800DD740E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE97C88721BA8EF800DD740E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEB67AC6221A92F500E61EAC /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,8 @@
 		EEE152C421E0A9D900B25434 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				EE1A6108220ECA0C00BC824D /* Item.swift */,
 				EE1A610A220ECA1900BC824D /* Category.swift */,
+				EE1A6108220ECA0C00BC824D /* Item.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -106,8 +108,9 @@
 		EEE152C521E0A9F500B25434 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EE97C87D21BA8EF800DD740E /* TodoListViewController.swift */,
 				EE1127AE2206BB260039FC4A /* CategoryTableViewController.swift */,
+				EE97C87D21BA8EF800DD740E /* TodoListViewController.swift */,
+				EEB67AC6221A92F500E61EAC /* SwipeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,13 +226,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Todoey/Pods-Todoey-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -247,6 +254,7 @@
 				EE97C87E21BA8EF800DD740E /* TodoListViewController.swift in Sources */,
 				EE97C87C21BA8EF800DD740E /* AppDelegate.swift in Sources */,
 				EE1127AF2206BB260039FC4A /* CategoryTableViewController.swift in Sources */,
+				EEB67AC7221A92F500E61EAC /* SwipeTableViewController.swift in Sources */,
 				EE1A610B220ECA1900BC824D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,10 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Z5AGKU435;
 				INFOPLIST_FILE = Todoey/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiwooban.Todoey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -416,10 +421,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Z5AGKU435;
 				INFOPLIST_FILE = Todoey/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiwooban.Todoey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
